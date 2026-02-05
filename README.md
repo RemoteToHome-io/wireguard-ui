@@ -251,6 +251,4 @@ MIT. See [LICENSE](https://github.com/ngoduykhanh/wireguard-ui/blob/master/LICEN
 
 ## Support
 
-If you like the project and want to support it, you can *buy me a coffee* ☕
-
-<a href="https://www.buymeacoffee.com/khanhngo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+If you like this project, please support the original author at the [upstream repository](https://github.com/ngoduykhanh/wireguard-ui#support).
