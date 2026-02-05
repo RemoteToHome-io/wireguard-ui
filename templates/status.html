@@ -35,8 +35,8 @@ Connected Peers
 
   function ipToNumber(ip) {
     // Extract IP from formats like "10.9.0.132/32" or "99.92.101.230:56078"
-    const match = ip.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/);
-    if (!match) return 0;
+    const match = (ip || '').trim().match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/);
+    if (!match) return null; // Empty/invalid IPs will be sorted to bottom
     return (parseInt(match[1]) << 24) + (parseInt(match[2]) << 16) + (parseInt(match[3]) << 8) + parseInt(match[4]);
   }
 
@@ -65,6 +65,11 @@ Connected Peers
     rows.sort((a, b) => {
       const aValue = getSortValue(a.cells[columnIndex], sortType);
       const bValue = getSortValue(b.cells[columnIndex], sortType);
+
+      // Push null/empty values to bottom regardless of sort direction
+      if (aValue === null && bValue === null) return 0;
+      if (aValue === null) return 1;
+      if (bValue === null) return -1;
 
       let comparison = 0;
       if (sortType === 'text') {
