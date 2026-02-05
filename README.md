@@ -2,6 +2,16 @@
 
 # wireguard-ui
 
+> **Fork Notice:** This is a fork of [ngoduykhanh/wireguard-ui](https://github.com/ngoduykhanh/wireguard-ui) with the following enhancements:
+>
+> - **Sortable columns on the Status page** - Click any column header to sort (descending → ascending → reset)
+> - Supports sorting by: Name, Email, Received/Transmitted bytes, Connected status, Last Handshake, and more
+> - Reset Sort button to restore original order
+>
+> A [pull request](https://github.com/ngoduykhanh/wireguard-ui/pull/685) has been submitted to merge these changes upstream.
+>
+> **Docker image:** `ghcr.io/remotetohome-io/wireguard-ui:sortable-columns`
+
 A web user interface to manage your WireGuard setup.
 
 ## Features
